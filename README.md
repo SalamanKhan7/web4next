@@ -1,8 +1,25 @@
-# React + Vite
+# Web4Next
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🛠️ React Form Builder App
 
-Currently, two official plugins are available:
+This project is a dynamic **Drag-and-Drop Form Builder** built with **React**, **React Hook Form**, and **react-dnd**. Users can drag form elements like text inputs, checkboxes, dropdowns, and more to create custom forms on the fly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+
+- Drag-and-drop functionality using `react-dnd`
+- Supports multiple form elements: text, email, checkbox, radio, file upload, date picker, and more
+- Form validation using `react-hook-form`
+- Responsive design for desktop and mobile
+- Remove added form fields with a single click
+
+## 📦 Tech Stack
+
+- React.js
+- React Hook Form
+- React DnD (Drag and Drop)
+- CSS Modules for styling
+
+## 🔧 Installation and Setup
+
+**Clone the repository**
+git clone https://github.com/SalamanKhan7/web4next.git

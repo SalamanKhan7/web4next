@@ -8,7 +8,6 @@ import {
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import styles from "./FormBuilder.module.css";
-
 // Available form elements
 const formElements = [
   { id: "text", label: "Text Input" },
@@ -212,20 +211,6 @@ const FormInput = (prop) => {
           )}
         />
       );
-    // case "file":
-    //   return (
-    //     <Controller
-    //       name={name}
-    //       control={control}
-    //       render={({ field }) => (
-    //         <input
-    //           type="file"
-    //           onChange={(e) => field.onChange(e.target.files[0])}
-    //           className={styles.input}
-    //         />
-    //       )}
-    //     />
-    //   );
     case "file":
       return (
         <Controller
@@ -244,7 +229,6 @@ const FormInput = (prop) => {
           )}
         />
       );
-
     default:
       return null;
   }
@@ -263,11 +247,7 @@ const FormBuilder = () => {
   };
 
   const onSubmit = (data) => {
-    // alert(JSON.stringify(data, null, 2)); // Show form data
-    // reset();
-    // setSelectedElements([]);
     const processedData = { ...data };
-
     // Convert file objects to their name for display purposes
     Object.keys(processedData).forEach((key) => {
       if (processedData[key] instanceof File) {
