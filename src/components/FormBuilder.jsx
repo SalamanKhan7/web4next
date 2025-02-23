@@ -10,8 +10,8 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import styles from "./FormBuilder.module.css";
 // Available form elements
 const formElements = [
-  { id: "text", label: "Text Input" },
   { id: "number", label: "Number Input" },
+  { id: "text", label: "Text Input" },
   { id: "email", label: "Email Input" },
   { id: "checkbox", label: "Checkbox" },
   { id: "radio", label: "Radio Button" },
@@ -85,20 +85,6 @@ const FormInput = (prop) => {
   const { control } = useFormContext();
 
   switch (element.id) {
-    case "text":
-      return (
-        <Controller
-          name={name}
-          control={control}
-          render={({ field }) => (
-            <input
-              {...field}
-              placeholder="Enter text"
-              className={styles.input}
-            />
-          )}
-        />
-      );
     case "number":
       return (
         <Controller
@@ -109,6 +95,20 @@ const FormInput = (prop) => {
               type="number"
               {...field}
               placeholder="Enter number"
+              className={styles.input}
+            />
+          )}
+        />
+      );
+    case "text":
+      return (
+        <Controller
+          name={name}
+          control={control}
+          render={({ field }) => (
+            <input
+              {...field}
+              placeholder="Enter text"
               className={styles.input}
             />
           )}
@@ -224,7 +224,7 @@ const FormInput = (prop) => {
                 const file = e.target.files[0];
                 field.onChange(file); // Update form state with the selected file
               }}
-              className={styles.input}
+              className={styles.inputFile}
             />
           )}
         />
@@ -273,7 +273,6 @@ const FormBuilder = () => {
           <h2 className={styles.title}>Build Your Form</h2>
           <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)}>
-              {/* <DropArea onDrop={onDrop} formElements={selectedElements} /> */}
               <DropArea
                 onDrop={onDrop}
                 formElements={selectedElements}

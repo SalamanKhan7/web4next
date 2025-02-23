@@ -60,10 +60,20 @@
   border: 1px solid #ccc;
   border-radius: 8px;
 }
-
+.textarea {
+  margin: 5px 0;
+}
+.inputFile {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 .radioGroup {
   display: flex;
   justify-content: space-around;
+  padding: 10px;
   margin: 10px 0;
 }
 
@@ -71,6 +81,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 .submitButton {
@@ -125,14 +138,23 @@
 
   .formElementsSection,
   .formBuilderSection {
-    min-width: 100%;
+    min-width: 200px;
   }
-
+  .inputFile {
+    width: 130px;
+  }
+  .input {
+    width: 130px;
+  }
   .title {
     font-size: 1.25rem;
   }
 
   .dropArea {
     min-height: 150px;
+  }
+  .textarea,
+  .radioGroup {
+    width: 130px;
   }
 }
