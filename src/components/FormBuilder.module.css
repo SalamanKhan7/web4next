@@ -140,11 +140,12 @@
   .formBuilderSection {
     min-width: 200px;
   }
-  .inputFile {
-    width: 130px;
-  }
-  .input {
-    width: 130px;
+
+  .input,
+  .inputFile,
+  .textarea,
+  .radioGroup {
+    width: 115px;
   }
   .title {
     font-size: 1.25rem;
@@ -152,9 +153,5 @@
 
   .dropArea {
     min-height: 150px;
-  }
-  .textarea,
-  .radioGroup {
-    width: 130px;
   }
 }
